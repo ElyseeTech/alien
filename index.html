@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Skull</title>
+       
+    </head>
+    <body>
+        
+        <div class="skull">
+            <P></P>
+            <P></P>
+            <P id="nose"></P>
+        </div>
+         <div id="jaw">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+         </div>
+        
+
+     <style>
+       body{
+        margin-top: 200px;
+        background: #0a0a0a;
+        display: grid;
+        place-content: center;
+        place-items: center;
+        
+       }
+       div{
+        background: #4fff7b;
+
+       }
+       
+       .skull{
+        width:160px;
+        height:140px;
+        border-radius: 80px 80px 30px 30px;
+        gap: 30px;
+
+       }
+       #jaw{
+        width: 120px;
+        height: 70px;
+        border-radius: 0px 0px 40px 40px;
+        gap: 4px;
+
+       }
+       .skull, #jaw{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+       }
+       p{
+        margin: 0px;
+        background:#191919;
+        border-radius: 50%;
+
+       }
+       .skull > p{
+        width: 50px;
+        height: 50px;
+        margin-bottom: 6px;
+
+       }
+       #jaw > p {
+        width:20px;
+        height: 20px;
+        border-radius: 20px 20px 0px 0px;
+       }
+       #nose{
+        position:fixed;
+        width: 30px;
+        height: 50px;
+        translate: 0px 28px;
+       }
+       @keyframes anim{
+            0%{left: 0px; top: 0px;}
+            25%{left: 100px; top: 0px;}
+            50%{left: 100px; top: 100px}
+            75%{left: 0px; top: 100px;}
+            100%{left: 100px; top:100px;}
+            
+        }
+        .skull, #jaw{
+            position:relative;
+            -webkit-animation: anim 1s ease-in-out 3;
+            -moz-animation: anim 5s linear infinite;
+            -o-animation: anim 5s linear infinite;
+        
+        }
+     </style>   
+    </body>
+</html>
